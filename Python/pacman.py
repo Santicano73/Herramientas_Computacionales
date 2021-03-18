@@ -24,6 +24,8 @@ ghosts = [
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
+    [vector(-40, 0), vector(-5, 0)],
+    [vector(40, 0), vector(-5, 0)]
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -139,7 +141,8 @@ def move():
 
         up()
         goto(point.x + 10, point.y + 10)
-        dot(20, 'red')
+        colors_f=['cyan','red','green','chocolate']
+        dot(20,choice(colors_f))
 
     update()
 
